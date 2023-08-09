@@ -1,0 +1,25 @@
+/* 
+Conveccion de buenas practicas para crear los estilos
+1. Posicionamiento.
+2. Modelo de caja (Box Model)
+3. Tipografia.
+4. Visual.
+5. Otros.
+*/
+
+/* Estilos generales */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
