@@ -7,16 +7,27 @@ Conveccion de buenas practicas para crear los estilos
 5. Otros.
 */
 
+:root{
+    --pizza-orange: #f99f25;
+    --pizza-dough: #f5e9d2;  /* #f4dcae */
+    --olive: #2f4b0f;
+    --pizza-beige: #eebf79;
+    --italian-tomato: #a01006;
+    --italian-background: #efefef;
+}
+
 /* Estilos generales */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: var(--olive);
 }
 
 html{
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--italian-background);
 }
 
 main{
@@ -30,10 +41,39 @@ main{
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-auto-rows: 400px;
+    background-color: var(--pizza-dough);
 }
 
 .hero-info{
     align-self: center;
+    width: 90%;
+    padding-left: 80px;
+}
+
+.hero-info h1{
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.hero-info p{
+    font-size: 1.8rem;
+    color: black;
+}
+
+.hero-info button{
+    width: 200px;
+    height: 40px;
+    margin-top: 12px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--pizza-orange);
+    border: none;
+    border-radius: 10px;
+}
+
+.hero-info button:hover{
+    box-shadow: 0px 4px 7px rgba(89, 73, 30, 0.16);
+    cursor: pointer;
 }
 
 .hero-image{
