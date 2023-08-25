@@ -143,7 +143,7 @@ main{
 @media screen and (max-width: 790px) {
     .hero{
         grid-template-columns: 1fr;
-        background-image: linear-gradient(var(--pizza-orange) 20%, var(--pizza-dough-opaco)), url("./images/hero.png");
+        background-image: linear-gradient(var(--pizza-orange) 20%, var(--pizza-dough-opaco)), url("https://i.ibb.co/R0xYKtR/hero.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
