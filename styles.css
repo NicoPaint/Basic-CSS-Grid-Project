@@ -9,7 +9,8 @@ Conveccion de buenas practicas para crear los estilos
 
 :root{
     --pizza-orange: #f99f25;
-    --pizza-dough: #f5e9d2;  /* #f4dcae */
+    --pizza-dough: #f5e8d1;  /* #f4dcae */
+    --pizza-dough-opaco: rgba(245, 232, 209, 0.5);  /* #f4dcae */
     --olive: #2f4b0f;
     --pizza-beige: #eebf79;
     --italian-tomato: #a01006;
@@ -39,15 +40,14 @@ main{
 /* Primera sección */
 .hero{
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: minmax(300px, 2fr) 3fr;
     grid-auto-rows: 400px;
-    background-color: var(--pizza-dough);
+    background: linear-gradient(var(--pizza-orange) 20%, var(--pizza-dough));
 }
 
 .hero-info{
-    align-self: center;
+    place-self: center;
     width: 90%;
-    padding-left: 80px;
 }
 
 .hero-info h1{
@@ -98,7 +98,7 @@ main{
 
 .dishes-grid{
     display: grid;
-    grid-template-columns: repeat(4, minmax(150px, 200px));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
     grid-auto-rows: 1fr;
     justify-content: center;
     gap: 20px;
@@ -122,7 +122,7 @@ main{
 
 .menu-grid{
     display: grid;
-    grid-template-columns: repeat(5, minmax(100px, 250px));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
     justify-content: center;
     gap: 20px;
 }
@@ -137,4 +137,32 @@ main{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Responsive design */
+@media screen and (max-width: 790px) {
+    .hero{
+        grid-template-columns: 1fr;
+        background-image: linear-gradient(var(--pizza-orange) 20%, var(--pizza-dough-opaco)), url("./images/hero.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .hero-image{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .dishes-grid{
+        grid-template-columns: repeat(2, minmax(75px, 200px));
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+    .dishes-grid{
+        grid-template-columns: repeat(4, minmax(150px, 200px));
+    }
 }
